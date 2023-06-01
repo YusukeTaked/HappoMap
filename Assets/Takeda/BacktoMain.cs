@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TapToStart : MonoBehaviour
+public class BacktoMain : MonoBehaviour
 {
+    public GameObject Setting;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,8 @@ public class TapToStart : MonoBehaviour
     {
         
     }
-    public void OnClick()
+    public void Onclick() 
     {
-        Debug.Log("スタートボタンがタップされた");
+        Setting.SetActive(false);
     }
 }
