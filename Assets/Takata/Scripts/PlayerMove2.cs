@@ -12,9 +12,9 @@ public class PlayerMove2 : MonoBehaviour
     //private Vector2 startPos, currentPos, differenceDisVector2;
     //[SerializeField] private float radian, differenceDisFloat;
 
-    const float LOAD_WIDTH = 6f;
-    const float LOAD_HEIGHT = 6f;
-    const float MOVE_MAX = 2.5f;
+    const float LOAD_WIDTH = 18f;
+    const float LOAD_HEIGHT = 18f;
+    const float MOVE_MAX = 9f;
     Vector3 previousPos, currentPos;
 
     // Start is called before the first frame update
