@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BacktoMain : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class cangeToMapSelect : MonoBehaviour
 {
-    public GameObject Setting;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +15,9 @@ public class BacktoMain : MonoBehaviour
     {
         
     }
-    public void Onclick() 
+
+    public void OnTap()
     {
-        Setting.SetActive(false);
+        SceneManager.LoadScene("MapSelect");
     }
 }

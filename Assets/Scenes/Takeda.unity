@@ -146,7 +146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &673639485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,13 +563,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3769716938024506324, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
+      propertyPath: m_text
+      value: Tap to Screen
+      objectReference: {fileID: 0}
     - target: {fileID: 3769716938694773441, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
       propertyPath: setting
       value: 
       objectReference: {fileID: 913838049}
+    - target: {fileID: 3769716938694773442, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3769716939328784311, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769716939328784311, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3769716939328784314, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
       propertyPath: m_Camera
@@ -659,7 +671,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3769716939539953980, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ffb878103d3a6e408e18cb3a62c415c, type: 3}
 --- !u!1001 &5412245061884111100
 PrefabInstance:
@@ -768,9 +781,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5412245061254422040, guid: 5e630b8e9ac0429498eef950f6e420eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5412245061254422043, guid: 5e630b8e9ac0429498eef950f6e420eb, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 423988692}
+    - target: {fileID: 5412245061423063275, guid: 5e630b8e9ac0429498eef950f6e420eb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412245061423063275, guid: 5e630b8e9ac0429498eef950f6e420eb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2048
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e630b8e9ac0429498eef950f6e420eb, type: 3}
