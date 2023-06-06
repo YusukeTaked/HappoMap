@@ -5,10 +5,12 @@ using UnityEngine;
 public class MapMove : MonoBehaviour
 {
     public float sensitivity = 1f;
+    
 
     const float LOAD_WIDTH = 6f;
     const float LOAD_HEIGHT = 6f;
     const float MOVE_MAX = 2.5f;
+    const float MAP_MOVE_MAX = 30f;
 
     Vector3 previousPos, currentPos;
 
@@ -21,6 +23,7 @@ public class MapMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var wheel = Input.mouseScrollDelta.y;
         if (Input.GetMouseButtonDown(1))
         {
             previousPos = Input.mousePosition;
@@ -36,10 +39,11 @@ public class MapMove : MonoBehaviour
             diffDistanceW *= sensitivity;
             diffDistanceH *= sensitivity;
 
-            //次のローカルx座標を設定　※道の外に出ないように
+            //次のローカルx座標を設定　
             float newX = Mathf.Clamp(transform.localPosition.x + diffDistanceW, -MOVE_MAX, MOVE_MAX);
             float newY = Mathf.Clamp(transform.localPosition.y + diffDistanceH, -MOVE_MAX, MOVE_MAX);
-            transform.localPosition = new Vector3(newX, newY, -10);
+            float newZ = Mathf.Clamp(transform.localPosition.z + wheel, -MAP_MOVE_MAX, -3);
+            transform.localPosition = new Vector3(newX, newY, newZ);
 
             //タップ位置を更新
             previousPos = currentPos;
