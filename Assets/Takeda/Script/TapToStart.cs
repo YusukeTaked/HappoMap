@@ -25,6 +25,8 @@ public class TapToStart : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
+    private bool Fadeout=false;
+
     public void NextScene()
     {
         //　ロード画面UIをアクティブにする
@@ -50,14 +52,18 @@ public class TapToStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fadeActive)
+        if (fadeActive == true)
         {
-            if (alpha >= 255)
+            if (alpha < 1)
             {
-                if (Root == 1)
-                {
-                    SceneManager.LoadScene("");
-                }
+                alpha += 0.01f;
+                fadealpha.color = new Color(0, 0, 0, alpha);
+
+            }
+            else if (alpha >= 1)
+            {
+                NextScene();
+                fadeActive = false;
             }
         }
     }
@@ -66,11 +72,12 @@ public class TapToStart : MonoBehaviour
         Panelfade.SetActive(true);
         fadeActive = true;
         Root = 1;
+        fadeActive = true;
     }
     IEnumerator LoadData()
     {
         // シーンの読み込みをする
-        async = SceneManager.LoadSceneAsync("Load1");
+        async = SceneManager.LoadSceneAsync("Takata");
 
         //　読み込みが終わるまで進捗状況をスライダーの値に反映させる
         while (!async.isDone)
@@ -81,39 +88,5 @@ public class TapToStart : MonoBehaviour
         }
     }
 
-    //IEnumerator Color_FadeIn()
-    //{
-    //    // 画面をフェードインさせるコールチン
-    //    // 前提：画面を覆うPanelにアタッチしている
-
-    //    // 色を変えるゲームオブジェクトからImageコンポーネントを取得
-    //    Image fade = GetComponent<Image>();
-
-    //    // フェード元の色を設定（黒）★変更可
-    //    fade.color = new Color((0.0f / 255.0f), (0.0f / 255.0f), (0.0f / 0.0f), (255.0f / 255.0f));
-
-    //    // フェードインにかかる時間（秒）★変更可
-    //    const float fade_time = 2.0f;
-
-    //    // ループ回数（0はエラー）★変更可
-    //    const int loop_count = 90;
-
-    //    // ウェイト時間算出
-    //    float wait_time = fade_time / loop_count;
-
-    //    // 色の間隔を算出
-    //    float alpha_interval = 255.0f / loop_count;
-
-    //    // 色を徐々に変えるループ
-    //    for (float alpha = 255.0f; alpha >= 0.0f; alpha -= alpha_interval)
-    //    {
-    //        // 待ち時間
-    //        yield return new WaitForSeconds(wait_time);
-
-    //        // Alpha値を少しずつ下げる
-    //        Color new_color = fade.color;
-    //        new_color.a = alpha / 255.0f;
-    //        fade.color = new_color;
-    //    }
-    //}
+   
 }
