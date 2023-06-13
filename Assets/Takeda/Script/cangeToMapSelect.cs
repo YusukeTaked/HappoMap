@@ -51,7 +51,7 @@ public class cangeToMapSelect : MonoBehaviour
         {
             if (alpha < 1)
             {
-                alpha += 0.01f;
+                alpha += 0.1f;
                 fadealpha.color = new Color(0, 0, 0, alpha);
 
             }
@@ -61,8 +61,8 @@ public class cangeToMapSelect : MonoBehaviour
                 fadeActive = false;
             }
         }
-
-    }
+        }
+    
 
     public void OnTap()
     {
