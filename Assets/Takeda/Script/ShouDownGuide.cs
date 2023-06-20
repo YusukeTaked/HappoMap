@@ -13,7 +13,10 @@ public class ShouDownGuide : MonoBehaviour
     public GameObject StartButton;
     public GameObject BackButton;
 
-    public int ButtonSelected;
+    public int typeButton;
+
+    public static int typeSelect;
+
 
     //ボタンの位置情報取得用の変数
     RectTransform ButtonPos ;
@@ -27,8 +30,8 @@ public class ShouDownGuide : MonoBehaviour
     public GameObject otherBtn4;
 
     private bool actMakimono=false;
-    private bool BackSelect = false;
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,9 +76,15 @@ public class ShouDownGuide : MonoBehaviour
         otherBtn4.SetActive(false);
         Makimono.SetActive(true);
         actMakimono = true;
+        typeSelect = typeButton;
     }
     public void OnBack()
     {
         actMakimono = false;
+    }    
+    public int TypeOfButton()
+    {
+        return typeSelect;
     }
+
 }
