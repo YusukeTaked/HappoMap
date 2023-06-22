@@ -29,6 +29,7 @@ public class TapToStart : MonoBehaviour
 
     public void NextScene()
     {
+
         //　ロード画面UIをアクティブにする
         loadUI.SetActive(true);
 
@@ -72,7 +73,6 @@ public class TapToStart : MonoBehaviour
         Panelfade.SetActive(true);
         fadeActive = true;
         Root = 1;
-        fadeActive = true;
     }
     IEnumerator LoadData()
     {

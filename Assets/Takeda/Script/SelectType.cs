@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class SelectType : MonoBehaviour
 {
-    public static int typeSelect;
-    public ShouDownGuide shouDownGuide;
+    public bool Buck;
+
+    //BackToSelect backToSelect;
+
+    public bool Buckto()
+    {
+        return Buck;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        typeSelect= shouDownGuide.TypeOfButton();
+
     }
 
     // Update is called once per frame
@@ -18,8 +24,5 @@ public class SelectType : MonoBehaviour
     {
         
     }
-    public int TypeSelect()
-    {
-        return typeSelect;
-    }
+
 }

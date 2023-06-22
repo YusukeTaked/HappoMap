@@ -178,7 +178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u306F\u3058\u3081\u308B"
+  m_text: "\u623B\u308B\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87da47bdc474aa346849000877ca5ade, type: 2}
   m_sharedMaterial: {fileID: 5439586455619760405, guid: 87da47bdc474aa346849000877ca5ade, type: 2}
@@ -372,7 +372,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4344659310595072836}
         m_TargetAssemblyTypeName: ShouDownGuide, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: OnShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -398,6 +398,9 @@ MonoBehaviour:
   Makimono: {fileID: 643048824877617804}
   GuideTex: {fileID: 4344659310590598451}
   StartButton: {fileID: 4344659310036413642}
+  BackButton: {fileID: 5667010295513971548}
+  typeButton: 2
+  DefoButtonPos: 350
   otherBtn1: {fileID: 643048825274750449}
   otherBtn2: {fileID: 643048824470315893}
   otherBtn3: {fileID: 643048824411478358}
@@ -414,6 +417,7 @@ GameObject:
   - component: {fileID: 643048824411478354}
   - component: {fileID: 643048824411478353}
   - component: {fileID: 643048824411478352}
+  - component: {fileID: 814551500}
   m_Layer: 5
   m_Name: Root4
   m_TagString: Untagged
@@ -524,6 +528,29 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &814551500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643048824411478358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3942b8548df894aaa630a3239d2570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MapButton: {fileID: 643048824411478358}
+  Makimono: {fileID: 643048824877617804}
+  GuideTex: {fileID: 4344659310590598451}
+  StartButton: {fileID: 4344659310036413642}
+  BackButton: {fileID: 5667010295513971548}
+  typeButton: 4
+  DefoButtonPos: -50
+  otherBtn1: {fileID: 643048825274750449}
+  otherBtn2: {fileID: 643048824470315893}
+  otherBtn3: {fileID: 643048824277038218}
+  otherBtn4: {fileID: 643048824791025959}
 --- !u!1 &643048824470315893
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +563,7 @@ GameObject:
   - component: {fileID: 643048824470315889}
   - component: {fileID: 643048824470315888}
   - component: {fileID: 643048824470315895}
+  - component: {fileID: 1040874350}
   m_Layer: 5
   m_Name: Root3
   m_TagString: Untagged
@@ -646,6 +674,29 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1040874350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643048824470315893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3942b8548df894aaa630a3239d2570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MapButton: {fileID: 643048824470315893}
+  Makimono: {fileID: 643048824877617804}
+  GuideTex: {fileID: 4344659310590598451}
+  StartButton: {fileID: 4344659310036413642}
+  BackButton: {fileID: 5667010295513971548}
+  typeButton: 3
+  DefoButtonPos: 150
+  otherBtn1: {fileID: 643048825274750449}
+  otherBtn2: {fileID: 643048824277038218}
+  otherBtn3: {fileID: 643048824411478358}
+  otherBtn4: {fileID: 643048824791025959}
 --- !u!1 &643048824791025959
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +709,7 @@ GameObject:
   - component: {fileID: 643048824791025955}
   - component: {fileID: 643048824791025954}
   - component: {fileID: 643048824791025953}
+  - component: {fileID: 610256752}
   m_Layer: 5
   m_Name: NomalRoot
   m_TagString: Untagged
@@ -768,6 +820,29 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &610256752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643048824791025959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3942b8548df894aaa630a3239d2570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MapButton: {fileID: 643048824791025959}
+  Makimono: {fileID: 643048824877617804}
+  GuideTex: {fileID: 4344659310590598451}
+  StartButton: {fileID: 4344659310036413642}
+  BackButton: {fileID: 5667010295513971548}
+  typeButton: 5
+  DefoButtonPos: -250
+  otherBtn1: {fileID: 643048825274750449}
+  otherBtn2: {fileID: 643048824470315893}
+  otherBtn3: {fileID: 643048824411478358}
+  otherBtn4: {fileID: 643048824277038218}
 --- !u!1 &643048824877617804
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +1043,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4344659311530918604}
         m_TargetAssemblyTypeName: ShouDownGuide, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: OnShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -994,6 +1069,9 @@ MonoBehaviour:
   Makimono: {fileID: 643048824877617804}
   GuideTex: {fileID: 4344659310590598451}
   StartButton: {fileID: 4344659310036413642}
+  BackButton: {fileID: 5667010295513971548}
+  typeButton: 1
+  DefoButtonPos: 550
   otherBtn1: {fileID: 643048824277038218}
   otherBtn2: {fileID: 643048824470315893}
   otherBtn3: {fileID: 643048824411478358}
@@ -1086,6 +1164,7 @@ GameObject:
   - component: {fileID: 4344659310036413639}
   - component: {fileID: 4344659310036413640}
   - component: {fileID: 4344659310036413641}
+  - component: {fileID: 1676454236}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1195,7 +1274,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4344659310036413640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1676454236}
+        m_TargetAssemblyTypeName: TapToStart, Assembly-CSharp
+        m_MethodName: ChangeARoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1676454236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344659310036413642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47da7466fc75c5b49985658446f097ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panelfade: {fileID: 4344659311068120399}
+  loadUI: {fileID: 0}
+  slider: {fileID: 0}
 --- !u!1 &4344659310222709446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,6 +2276,7 @@ GameObject:
   - component: {fileID: 6952963553275492683}
   - component: {fileID: 6030365280647672762}
   - component: {fileID: 5563337083124673045}
+  - component: {fileID: 1234113769}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -2261,7 +2368,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2279,4 +2386,78 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6030365280647672762}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4344659311530918604}
+        m_TargetAssemblyTypeName: ShouDownGuide, Assembly-CSharp
+        m_MethodName: OnCancelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4344659310595072836}
+        m_TargetAssemblyTypeName: ShouDownGuide, Assembly-CSharp
+        m_MethodName: OnCancelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1040874350}
+        m_TargetAssemblyTypeName: ShouDownGuide, Assembly-CSharp
+        m_MethodName: OnCancelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 814551500}
+        m_TargetAssemblyTypeName: ShouDownGuide, Assembly-CSharp
+        m_MethodName: OnCancelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 610256752}
+        m_TargetAssemblyTypeName: ShouDownGuide, Assembly-CSharp
+        m_MethodName: OnCancelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1234113769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667010295513971548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422ffd3981d186142a18ac098f414628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cancel: 0
+  CancelButton: {fileID: 5667010295513971548}

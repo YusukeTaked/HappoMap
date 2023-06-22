@@ -13,12 +13,15 @@ public class ShouDownGuide : MonoBehaviour
     public GameObject StartButton;
     public GameObject BackButton;
 
+
     public int typeButton;
 
     public static int typeSelect;
 
+    private bool CancelButton;
 
     //ボタンの位置情報取得用の変数
+    public float DefoButtonPos;
     RectTransform ButtonPos ;
     RectTransform MakimonoPos;
 
@@ -39,23 +42,25 @@ public class ShouDownGuide : MonoBehaviour
         MakimonoPos = Makimono.GetComponent<RectTransform>();
         Makimono.SetActive(false);
         GuideTex.SetActive(false);
-        StartButton.SetActive(false);
         BackButton.SetActive(false);
+        StartButton.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(actMakimono){
+        Debug.Log(ButtonPos.localPosition);
+        Debug.Log(DefoButtonPos);
+        if (actMakimono){
             if (ButtonPos.localPosition.y <550)
             {
-                ButtonPos.localPosition += new Vector3(0, 300*Time.deltaTime, 0);
+                ButtonPos.localPosition += new Vector3(0, 600*Time.deltaTime, 0);
             }
             else if (ButtonPos.localPosition.y >= 550)
             {
                 if (MakimonoPos.localPosition.y > 100)
                 {
-                    MakimonoPos.localPosition -= new Vector3(0,300*Time.deltaTime,0);
+                    MakimonoPos.localPosition -= new Vector3(0,600*Time.deltaTime,0);
                 }
                 else if (MakimonoPos.localPosition.y <= 100)
                 {
@@ -64,6 +69,39 @@ public class ShouDownGuide : MonoBehaviour
                     BackButton.SetActive(true);
                     actMakimono = false;
                 }
+            }
+        }
+
+        if (CancelButton==true)
+        {
+            GuideTex.SetActive(false);
+            StartButton.SetActive(false);
+            BackButton.SetActive(false);
+
+            if (MakimonoPos.localPosition.y < 1000)
+            {
+                MakimonoPos.localPosition += new Vector3(0, 600 * Time.deltaTime, 0);
+            }
+            else if (MakimonoPos.localPosition.y >= 1000)
+            {
+
+
+                if (DefoButtonPos < ButtonPos.localPosition.y)
+                {
+                    ButtonPos.localPosition -= new Vector3(0, 600 * Time.deltaTime, 0);
+                }
+                else if (DefoButtonPos >= ButtonPos.localPosition.y)
+                {
+                    CancelButton = false;
+                    otherBtn1.SetActive(true);
+                    otherBtn2.SetActive(true);
+                    otherBtn3.SetActive(true);
+                    otherBtn4.SetActive(true);
+                    Makimono.SetActive(false);
+                }
+
+
+
             }
         }
       
@@ -76,15 +114,14 @@ public class ShouDownGuide : MonoBehaviour
         otherBtn4.SetActive(false);
         Makimono.SetActive(true);
         actMakimono = true;
-        typeSelect = typeButton;
     }
     public void OnBack()
     {
         actMakimono = false;
-    }    
-    public int TypeOfButton()
+    }
+    public void OnCancelClick()
     {
-        return typeSelect;
+        CancelButton = true;
     }
 
 }
