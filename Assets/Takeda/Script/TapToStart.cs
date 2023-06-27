@@ -77,7 +77,7 @@ public class TapToStart : MonoBehaviour
     IEnumerator LoadData()
     {
         // シーンの読み込みをする
-        async = SceneManager.LoadSceneAsync("Takata");
+        async = SceneManager.LoadSceneAsync("Main");
 
         //　読み込みが終わるまで進捗状況をスライダーの値に反映させる
         while (!async.isDone)

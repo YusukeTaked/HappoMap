@@ -9,7 +9,7 @@ public class MapMove : MonoBehaviour
 
     const float LOAD_WIDTH = 6f;
     const float LOAD_HEIGHT = 6f;
-    const float MOVE_MAX = 2.5f;
+    float MOVE_MAX = 0.1f;
     const float MAP_MOVE_MAX = 30f;
 
     Vector3 previousPos, currentPos;
@@ -26,6 +26,11 @@ public class MapMove : MonoBehaviour
     void Update()
     {
         var wheel = Input.mouseScrollDelta.y;
+        MOVE_MAX += wheel;
+        if (MOVE_MAX <= 0)
+        {
+            MOVE_MAX = 0.1f;
+        }
         //float wheel = Input.GetAxis("Mouse ScrollWheel");
         float newZ = Mathf.Clamp(transform.localPosition.z + wheel, -MAP_MOVE_MAX, -3);
         transform.position = new Vector3(transform.position.x, transform.position.y, newZ);
